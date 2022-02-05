@@ -3,28 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projections</title>
+    <title>World Projections</title>
 </head>
 <body>
-    <h1>In this project I learned how to display images in different projections</h1>
+    <h1>In this project I learned how to display images in different projections using QGIS.</h1>
     
-    <h2 style="color:red">Describe in your own words how you displayed the map in different projections using QGIS</h2>
-    <p>You can write a paragraph here</p>
+    <h2 style="color:tomato">Description of how I displayed the map in different projections using QGIS:</h2>
+    <p>First, I began by opening QGIS and adding the Natural Earth vector layer found under Resources in Sakai. I downloaded the Plugin "Indicatrix mapper" and applied latitude and longitude lines on my map. Next, I went into Project Properties and clicked the CRS tab to open the Project Coordinate Reference System options. Using CRS I was able to look up different ESPGs and apply them to my map which displayed different projections of the world.</p>
     
     <h2>WGS84 Projection</h2>
-    <h3>Some observations</h3>
-    <a href=".//maps/4326.png">
-    <img src=".//maps/4326.png" alt="WGS84" width='500px'>
+    <h3>The World Geodetic System incorrectly shows the Earth as a flat rectangle and fails to depict the North Pole, however, this projection generally does well at preserving area, scale, and direction. </h3>
+    <a href="./PNGs/WGS84 Projection- HW3.png">
+    <img src="./PNGs/WGS84 Projection- HW3.png" alt="WGS84" width='500px'>
     </a>
     <h2>Aitoff Projection</h2>
-    <h3>Some observations</h3>
-    <a href=".//maps/54043.png">
-    <img src=".//maps/54043.png" alt="Aitoff" width='500px'>
+    <h3>The Aitoff Projection correctly depicts the Earth as an ellipsoid rather than a perfect sphere, however, the shape, direction and areas of masses on the projection are distorted.</h3>
+    <a href="./PNGs/Aitoff Projection- HW3.png">
+    <img src="./PNGs/Aitoff Projection- HW3.png" alt="Aitoff" width='500px'>
     </a>
-    <h2 style="color:red">Now, you should <u>add the following projections on your own:</u></h2>
-    <h3>EPSG: 3857, 53018, 54034, 54027, 102016, and two additional projections that you choose.</h3>
-    <p></p>
-    <h2>Data used for this project</h2>
+    <h2>Pseudo-Mercator</h2>
+    <h3>The Pseudo-Mercator projection preserves the shape of countries (and direction in regards to "constant true projection") but distorts the size of land masses, especially near the north and south pole. This projection was helpful for early navigators and explorers, however, it also leads to appearance of European domination of world.</h3>
+    <a href="./PNGs/WGS84 - Pseudo-Mercator Projection- HW3.png">
+    <img src="./PNGs/WGS84 - Pseudo-Mercator Projection- HW3.png" alt="Aitoff" width='500px'>
+    </a>
+    <h2>World Equidistant Conic Projection</h2>
+    <h3>The World Equidistant Conic Projection is shown centrally at the poles so distortion is seen in area, shape, and angles. Distance is preserved along the standard meridians and parallels.</h3>
+    <a href="./PNGs/World Equidistant Conic Projection- HW3.png">
+    <img src="./PNGs/World Equidistant Conic Projection- HW3.png" alt="WGS84" width='500px'>
+    </a>
+    <h2>World Cylindrical Equal Area Projection</h2>
+    <h3>The Cylindrical Equal Area Projection imperfectly portrays the Earth as a flat rectangle and distorts both of Earth's poles greatly. However, this projection does preserve correct scale along central parallels.</h3>
+    <a href="./PNGs/World Cylindrical Equal Area Projection- HW3.png">
+    <img src="./PNGs/World Cylindrical Equal Area Projection- HW3.png" alt="Aitoff" width='500px'>
+    </a>
+    <h2>Sphere Winkel I Projection</h2>
+    <h3>The Winkel I map used a combination of the Aitoff projection and equirectangular projection to reduce area and scale distoritions, however, it works best with spheres and the Earth is an ellipsoid. Similarly, the Winkel Tripel projection is currently being used by National Geographic. </h3>
+    <a href="./PNGs/Sphere Winkel I Projection- HW3.png">
+    <img src="./PNGs/Sphere Winkel I Projection- HW3.png" alt="Aitoff" width='500px'>
+    </a>
+    <h2>North Pole Azimuthal Equidistant Projection</h2>
+    <h3>The North Pole Azimuthal Equidistant Projection maintains equidistant qualities through its preservation of direction and distance against distortion. From the central point on the projection area and scale distort increasingly outwards.</h3>
+    <a href="./PNGs/North Pole Azimuthal Equidistant Projection- HW3.png">
+    <img src="./PNGs/North Pole Azimuthal Equidistant Projection- HW3.png" alt="WGS84" width='500px'>
+    </a>
+    <h2>Sphere Quartic Authalic Projection</h2>
+    <h3>The Sphere Quartic Authalic Projection bulges around the equator leading to severe distortion in shape and distance. General area appears to be preserved. </h3>
+    <a href="./PNGs/CRS- Sphere Quartic Authalic Projection HW 3.png">
+    <img src="./PNGs/CRS- Sphere Quartic Authalic Projection HW 3.png" alt="Aitoff" width='500px'>
+    </a>
+    <h2>LAEA Europe Projection</h2>
+    <h3>The LAEA Europe Projection problematically displays Europe as the central continent on the globe and masses near the equator are size distorted. Shape appears to be generally well preserved.</h3>
+    <a href="./PNGs/CRS- PTRA08- LAEA Europe Projection HW 3 .png">
+    <img src="./PNGs/CRS- PTRA08- LAEA Europe Projection HW 3 .png" alt="Aitoff" width='500px'>
+    </a>
+    <h2>Data Source:</h2>
     <a href="https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip"> Download Natrual Earth 1:10m Cultural Vector </a>
 </body>
 </html>
